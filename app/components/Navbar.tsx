@@ -14,11 +14,11 @@ const Navbar = (props: Props) => {
   return (
     <div className="flex justify-between p-5 bg-[#6b7af1]  items-center  text-white rounded-lg shadow-lg">
       {/* Left Part  */}
-      <div className="flex items-center">
+      <div className="group flex items-center">
         <span>
-          <StarIcon className="hover:opacity-[75%]" />
+          <StarIcon className="group-hover:opacity-[75%]" />
         </span>
-        <h1 className="font-bold text-xl md:text-2xl hover:opacity-[75%]">
+        <h1 className="font-bold text-xl md:text-2xl group-hover:opacity-[75%]">
           Subscription
         </h1>
       </div>
