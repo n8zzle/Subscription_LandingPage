@@ -3,6 +3,7 @@ import { IconButton, Menu, MenuItem } from "@mui/material";
 import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import StarIcon from "@mui/icons-material/Star";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -12,7 +13,12 @@ const Navbar = (props: Props) => {
     setMenuState(!menuState);
   };
   return (
-    <div className="fixed top-0 left-0 p-5 w-full ">
+    <motion.div
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 p-5 w-full "
+    >
       <div className="flex justify-between p-5 bg-[#6b7af1]  items-center  text-white rounded-lg shadow-lg">
         {/* Left Part  */}
         <div className="group flex items-center">
@@ -71,7 +77,7 @@ const Navbar = (props: Props) => {
           </Menu>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
