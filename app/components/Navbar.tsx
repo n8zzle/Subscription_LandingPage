@@ -17,18 +17,20 @@ const Navbar = (props: Props) => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 p-5 w-full "
+      className="fixed top-0 left-0 w-screen p-3 md:p-10 z-10 "
     >
       <div className="flex justify-between p-5 bg-[#6b7af1]  items-center  text-white rounded-lg shadow-lg">
         {/* Left Part  */}
-        <div className="group flex items-center">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.8 }}
+          className="flex items-center hover:cursor-pointer"
+        >
           <span>
-            <StarIcon className="group-hover:opacity-[75%]" />
+            <StarIcon />
           </span>
-          <h1 className="font-bold text-xl md:text-2xl group-hover:opacity-[75%]">
-            Subscription
-          </h1>
-        </div>
+          <h1 className="font-bold text-xl md:text-2xl ">Subscription</h1>
+        </motion.div>
         {/* Middle Part */}
         <div className="hidden md:flex md:space-x-10">
           <button className="hover:text-black hover:duration-300">About</button>
@@ -43,9 +45,13 @@ const Navbar = (props: Props) => {
         </div>
         {/* Right Part  */}
         <div className="hidden md:flex">
-          <button className="bg-white text-black font-bold px-4 py-2 rounded-full hover:bg-black hover:text-white">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+            className="bg-white text-black font-bold px-4 py-2 rounded-full "
+          >
             See plans
-          </button>
+          </motion.button>
         </div>
 
         {/*Mobile Menu*/}
