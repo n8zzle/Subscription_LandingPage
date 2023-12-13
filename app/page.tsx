@@ -1,12 +1,15 @@
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Partners from "./components/Partners";
+import About from "./components/About";
 
 export default function Home() {
   return (
-    <main className="w-full p-5 bg-white">
+    <main>
       <Navbar />
       <Hero />
+      <Partners />
+      <About />
     </main>
   );
 }
